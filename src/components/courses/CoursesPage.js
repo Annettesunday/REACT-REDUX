@@ -15,7 +15,7 @@ class CoursesPage extends React.Component {
         alert("Loading courses failed" + error);
       });
     }
-    if (courses.length === 0) {
+    if (authors.length === 0) {
       actions.loadAuthors().catch(error => {
         alert("Loading authors failed" + error);
       });
@@ -34,7 +34,8 @@ class CoursesPage extends React.Component {
 
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
+  actions: PropTypes.object.isRequired,
+  authors: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state) {
